@@ -55,6 +55,13 @@ function reverseArray(inputArray) {
 console.log(reverseArray(["A", "B", "C"]));
 
 
-function reverseArrayInPlace(inputArray){
-    let arrayValue = [1, 2, 3, 4, 5];
+function reverseArrayInPlace(array){
+    for (let i = 0; i < Math.floor(array.length / 2); i++) {
+        const temp = array[i];
+        array[i] = array[array.length - 1 - i];
+        array[array.length - 1 - i] = temp;
+    }
 }
+let arrayValue = [1, 2, 3, 4, 5];
+reverseArrayInPlace(arrayValue);
+console.log(arrayValue);
