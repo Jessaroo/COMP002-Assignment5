@@ -48,3 +48,8 @@ console.log(result);
 // reverseArrayInPlace(arrayValue);
 // console.log(arrayValue); // outputs [5, 4, 3, 2, 1]
 
+function reverseArray(inputArray) {
+    let reversedArray = Array.from(inputArray).reverse();
+    return reversedArray;
+}
+console.log(reverseArray(["A", "B", "C"]));
